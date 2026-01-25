@@ -1,0 +1,14 @@
+D:\C#class\Librarymanagementsystem\bin\Debug\net10.0\Librarymanagementsystem.exe
+D:\C#class\Librarymanagementsystem\bin\Debug\net10.0\Librarymanagementsystem.deps.json
+D:\C#class\Librarymanagementsystem\bin\Debug\net10.0\Librarymanagementsystem.runtimeconfig.json
+D:\C#class\Librarymanagementsystem\bin\Debug\net10.0\Librarymanagementsystem.dll
+D:\C#class\Librarymanagementsystem\bin\Debug\net10.0\Librarymanagementsystem.pdb
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.AssemblyInfoInputs.cache
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.AssemblyInfo.cs
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.csproj.CoreCompileInputs.cache
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.dll
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\refint\Librarymanagementsystem.dll
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.pdb
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\Librarymanagementsystem.genruntimeconfig.cache
+D:\C#class\Librarymanagementsystem\obj\Debug\net10.0\ref\Librarymanagementsystem.dll
