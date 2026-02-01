@@ -1,5 +1,4 @@
 using System;
-using System.Text.Json.Serialization;
 using LibraryManagementSystem.CustomException;
 
 namespace LibraryManagementSystem.Model
@@ -40,10 +39,6 @@ namespace LibraryManagementSystem.Model
         {
             Edition = edition;
         }
-
-        // Type property for JSON serialization
-        [JsonIgnore]
-        public string Type => "Newspaper";
 
         // Override DisplayInfo to show Newspaper-specific information
         public override void DisplayInfo()

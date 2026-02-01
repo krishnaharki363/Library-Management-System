@@ -12,5 +12,26 @@
     "Publisher": "Scribner",
     "PublicationYear": "1925",
     "Author": "F. Scott Fitzgerald"
+  },
+  {
+    "Type": "Book",
+    "Title": "Krish LifeSytle",
+    "Publisher": "Krish Publication House",
+    "PublicationYear": "2021",
+    "Author": "Krish Naharki"
+  },
+  {
+    "Type": "Magazine",
+    "Title": "Yatra Maganize",
+    "Publisher": "Buddha Air ",
+    "PublicationYear": "2023",
+    "IssueNumber": "909"
+  },
+  {
+    "Type": "Newspaper",
+    "Title": "Ekantipur",
+    "Publisher": "Kantipur Pvt Ltd",
+    "PublicationYear": "2021",
+    "Edition": "Kp-909"
   }
 ]
