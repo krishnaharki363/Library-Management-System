@@ -1,0 +1,16 @@
+[
+  {
+    "Type": "Book",
+    "Title": "Krish Naharki",
+    "Publisher": "Krish Publication House",
+    "PublicationYear": "2023",
+    "Author": "Krish Naharki"
+  },
+  {
+    "Type": "Book",
+    "Title": "The Great Gatsby",
+    "Publisher": "Scribner",
+    "PublicationYear": "1925",
+    "Author": "F. Scott Fitzgerald"
+  }
+]

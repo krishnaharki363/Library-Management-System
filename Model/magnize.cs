@@ -1,12 +1,13 @@
 using System;
+using System.Text.Json.Serialization;
 using LibraryManagementSystem.CustomException;
 
 namespace LibraryManagementSystem.Model
 {
     /// <summary>
-    /// Magazine class derived from Item
+    /// Magazine class derived from LibraryItemBase
     /// </summary>
-    public class Magazine : Item
+    public class Magazine : LibraryItemBase
     {
         // Private field with proper naming convention
         private string _issueNumber = null!;
@@ -39,6 +40,10 @@ namespace LibraryManagementSystem.Model
         {
             IssueNumber = issueNumber;
         }
+
+        // Type property for JSON serialization
+        [JsonIgnore]
+        public string Type => "Magazine";
 
         // Override DisplayInfo to show Magazine-specific information
         public override void DisplayInfo()

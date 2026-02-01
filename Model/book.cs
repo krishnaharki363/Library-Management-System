@@ -1,12 +1,13 @@
 using System;
+using System.Text.Json.Serialization;
 using LibraryManagementSystem.CustomException;
 
 namespace LibraryManagementSystem.Model
 {
     /// <summary>
-    /// Book class derived from Item
+    /// Book class derived from LibraryItemBase
     /// </summary>
-    public class Book : Item
+    public class Book : LibraryItemBase
     {
         // Private field with proper naming convention
         private string _author = null!;
@@ -39,6 +40,10 @@ namespace LibraryManagementSystem.Model
         {
             Author = author;
         }
+
+        // Type property for JSON serialization
+        [JsonIgnore]
+        public string Type => "Book";
 
         // Override DisplayInfo to show Book-specific information
         public override void DisplayInfo()

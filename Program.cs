@@ -21,10 +21,14 @@ namespace LibraryManagementSystem
                 Console.WriteLine("\nMenu:");
                 Console.WriteLine("1. Add a Book");
                 Console.WriteLine("2. Add a Magazine");
-                Console.WriteLine("3. Remove an Item");
-                Console.WriteLine("4. Display All Items");
-                Console.WriteLine("5. Exit");
-                Console.Write("Choose an option (1-5): ");
+                Console.WriteLine("3. Add a Newspaper");
+                Console.WriteLine("4. Remove an Item");
+                Console.WriteLine("5. Display All Items");
+                Console.WriteLine("6. Search by Title");
+                Console.WriteLine("7. Search by Author");
+                Console.WriteLine("8. Sort Items");
+                Console.WriteLine("9. Exit");
+                Console.Write("Choose an option (1-9): ");
 
                 string choice = Console.ReadLine()!;
 
@@ -39,18 +43,30 @@ namespace LibraryManagementSystem
                             AddMagazine(libraryService);
                             break;
                         case "3":
-                            RemoveItem(libraryService);
+                            AddNewspaper(libraryService);
                             break;
                         case "4":
+                            RemoveItem(libraryService);
+                            break;
+                        case "5":
                             libraryService.DisplayAllItems();
                             Console.WriteLine("\nPress any key to continue...");
                             Console.ReadKey();
                             break;
-                        case "5":
+                        case "6":
+                            SearchByTitle(libraryService);
+                            break;
+                        case "7":
+                            SearchByAuthor(libraryService);
+                            break;
+                        case "8":
+                            SortItems(libraryService);
+                            break;
+                        case "9":
                             running = false;
                             break;
                         default:
-                            Console.WriteLine("Invalid choice. Please select 1-5.");
+                            Console.WriteLine("Invalid choice. Please select 1-9.");
                             break;
                     }
                 }
@@ -305,6 +321,79 @@ namespace LibraryManagementSystem
             string title = Console.ReadLine()!;
 
             libraryService.RemoveItem(title);
+        }
+
+        static void AddNewspaper(LibraryService libraryService)
+        {
+            Console.WriteLine("\n--- Add a Newspaper ---");
+            Console.Write("Title: ");
+            string title = Console.ReadLine()!;
+            Console.Write("Publisher: ");
+            string publisher = Console.ReadLine()!;
+            Console.Write("Publication Year: ");
+            string year = Console.ReadLine()!;
+            Console.Write("Edition: ");
+            string edition = Console.ReadLine()!;
+
+            Newspaper newspaper = new Newspaper(title, publisher, year, edition);
+            libraryService.AddItem(newspaper);
+        }
+
+        static void SearchByTitle(LibraryService libraryService)
+        {
+            Console.WriteLine("\n--- Search by Title ---");
+            Console.Write("Enter title to search: ");
+            string title = Console.ReadLine()!;
+
+            var results = libraryService.SearchByTitle(title);
+            libraryService.DisplaySearchResults(results, title, "title");
+
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+        }
+
+        static void SearchByAuthor(LibraryService libraryService)
+        {
+            Console.WriteLine("\n--- Search by Author ---");
+            Console.Write("Enter author name to search: ");
+            string author = Console.ReadLine()!;
+
+            var results = libraryService.SearchByAuthor(author);
+            libraryService.DisplaySearchResults(results, author, "author");
+
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
+        }
+
+        static void SortItems(LibraryService libraryService)
+        {
+            Console.WriteLine("\n--- Sort Items ---");
+            Console.WriteLine("Sort by:");
+            Console.WriteLine("1. Title");
+            Console.WriteLine("2. Author");
+            Console.WriteLine("3. Publication Year");
+            Console.Write("Choose sort criteria (1-3): ");
+            string sortChoice = Console.ReadLine()!;
+
+            string sortBy = sortChoice switch
+            {
+                "1" => "title",
+                "2" => "author",
+                "3" => "year",
+                _ => ""
+            };
+
+            if (!string.IsNullOrEmpty(sortBy))
+            {
+                libraryService.DisplaySortedItems(sortBy);
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice.");
+            }
+
+            Console.WriteLine("\nPress any key to continue...");
+            Console.ReadKey();
         }
     }
 }
